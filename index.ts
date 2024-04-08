@@ -1,10 +1,13 @@
+#! /usr/bin/env node
 import inquirer from "inquirer"
 
-const randomnumber = 18
+const randomnumber = Math.floor(Math.random() * 10 + 1);
+
+
 const answer = await inquirer.prompt ([{
     name : "userguessednumber",
     type : "number",
-    message: "please gueseed a number"
+    message: "please gueseed a number between 1-10"
         
 }])
 if (answer.userguessednumber === randomnumber) {
